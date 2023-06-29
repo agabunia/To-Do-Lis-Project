@@ -1,15 +1,25 @@
-import React from 'react'
+import { PureComponent } from "react";
 
-function DoneTask({id, name, actionOne, actionTwo, buttonOne, buttonTwo}) {
-  return (
-    <div className="task">
-        <p className='task-name'> {name} </p>
-        <div className="task-bottom">
-            <button onClick={() => actionOne(id)}> {buttonOne} </button>
-            <button onClick={() => actionTwo(id)}> {buttonTwo} </button>
-        </div>
-    </div>
-  )
+
+class DoneTask extends PureComponent {
+  render() {
+    
+    const {id, name, actionOne, actionTwo, buttonOne, buttonTwo} = this.props
+
+    console.log('Render Done-task ' + id)
+    return (
+      <div className="task">
+         <p className='task-name'> {name} </p>
+         <div className="task-bottom">
+             <button onClick={() => actionOne(id)}> {buttonOne} </button>
+             <button onClick={() => actionTwo(id)}> {buttonTwo} </button>
+         </div>
+     </div>
+    )
+  }
 }
+
+
+  
 
 export default DoneTask

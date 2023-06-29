@@ -1,8 +1,9 @@
 import { Component } from "react";
 import ToDoTask from "./ToDoTask";
-import DoneLogo from '../assets/done.svg'
-import ToDoLogo from '../assets/to-do.svg'
+import DoneLogo from '../assets/done.svg';
+import ToDoLogo from '../assets/to-do.svg';
 import DoneTask from "./DoneTask";
+
 
 class List extends Component {
     
